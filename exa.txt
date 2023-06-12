@@ -1,0 +1,410 @@
+
+paulr@MSI MINGW64 /c/Git
+$ git clone https://github.com/PaulRamirez280/tienda.git
+Cloning into 'tienda'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (3/3), done.
+
+paulr@MSI MINGW64 /c/Git
+$ cd tienda
+
+paulr@MSI MINGW64 /c/Git/tienda (main)
+$ git branch produccion
+
+paulr@MSI MINGW64 /c/Git/tienda (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+paulr@MSI MINGW64 /c/Git/tienda (main)
+$ git checkout produccion
+Switched to branch 'produccion'
+
+paulr@MSI MINGW64 /c/Git/tienda (produccion)
+$ git status
+On branch produccion
+nothing to commit, working tree clean
+
+paulr@MSI MINGW64 /c/Git/tienda (produccion)
+$ git status
+On branch produccion
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        imagenproducto.png
+        materiaprima.txt
+        productofinal.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+paulr@MSI MINGW64 /c/Git/tienda (produccion)
+$ git add .
+
+paulr@MSI MINGW64 /c/Git/tienda (produccion)
+$ git commit -m "Se agregaron archivos a la rama produccion"
+[produccion e4a9d56] Se agregaron archivos a la rama produccion
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 imagenproducto.png
+ create mode 100644 materiaprima.txt
+ create mode 100644 productofinal.txt
+
+paulr@MSI MINGW64 /c/Git/tienda (produccion)
+$ git remote set-url https://github.com/PaulRamirez280/tienda.git
+usage: git remote set-url [--push] <name> <newurl> [<oldurl>]
+   or: git remote set-url --add <name> <newurl>
+   or: git remote set-url --delete <name> <url>
+
+    --push                manipulate push URLs
+    --add                 add URL
+    --delete              delete URLs
+
+
+paulr@MSI MINGW64 /c/Git/tienda (produccion)
+$ git remote set-url origin https://github.com/PaulRamirez280/tienda.git
+
+paulr@MSI MINGW64 /c/Git/tienda (produccion)
+$ git push origin produccion
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 6.05 KiB | 3.02 MiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'produccion' on GitHub by visiting:
+remote:      https://github.com/PaulRamirez280/tienda/pull/new/produccion
+remote:
+To https://github.com/PaulRamirez280/tienda.git
+ * [new branch]      produccion -> produccion
+
+paulr@MSI MINGW64 /c/Git/tienda (produccion)
+$ git branch ventas
+
+paulr@MSI MINGW64 /c/Git/tienda (produccion)
+$ git status
+On branch produccion
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        tiendas.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+paulr@MSI MINGW64 /c/Git/tienda (produccion)
+$ git add .
+
+paulr@MSI MINGW64 /c/Git/tienda (produccion)
+$ git checkout ventas
+Switched to branch 'ventas'
+A       tiendas.txt
+
+paulr@MSI MINGW64 /c/Git/tienda (ventas)
+$ git status
+On branch ventas
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   tiendas.txt
+
+
+paulr@MSI MINGW64 /c/Git/tienda (ventas)
+$ git commit -m "Se agrego 1 archivo a la rama ventas"
+[ventas 2d08e72] Se agrego 1 archivo a la rama ventas
+ 1 file changed, 3 insertions(+)
+ create mode 100644 tiendas.txt
+
+paulr@MSI MINGW64 /c/Git/tienda (ventas)
+$ git push origin ventas
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 312 bytes | 312.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ventas' on GitHub by visiting:
+remote:      https://github.com/PaulRamirez280/tienda/pull/new/ventas
+remote:
+To https://github.com/PaulRamirez280/tienda.git
+ * [new branch]      ventas -> ventas
+
+paulr@MSI MINGW64 /c/Git/tienda (ventas)
+$ git branch recursoHumano
+
+paulr@MSI MINGW64 /c/Git/tienda (ventas)
+$ git status
+On branch ventas
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        empleados.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+paulr@MSI MINGW64 /c/Git/tienda (ventas)
+$ git add .}
+fatal: pathspec '.}' did not match any files
+
+paulr@MSI MINGW64 /c/Git/tienda (ventas)
+$ git add .
+
+paulr@MSI MINGW64 /c/Git/tienda (ventas)
+$ git status
+On branch ventas
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   empleados.txt
+
+
+paulr@MSI MINGW64 /c/Git/tienda (ventas)
+$ git checkout recursoHumano
+Switched to branch 'recursoHumano'
+A       empleados.txt
+
+paulr@MSI MINGW64 /c/Git/tienda (recursoHumano)
+$ git commit -m "Se agrego 1 archivo a la rama recursoHumano"
+[recursoHumano 49237df] Se agrego 1 archivo a la rama recursoHumano
+ 1 file changed, 6 insertions(+)
+ create mode 100644 empleados.txt
+
+paulr@MSI MINGW64 /c/Git/tienda (recursoHumano)
+$ git push origin recursoHumano
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 342 bytes | 342.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'recursoHumano' on GitHub by visiting:
+remote:      https://github.com/PaulRamirez280/tienda/pull/new/recursoHumano
+remote:
+To https://github.com/PaulRamirez280/tienda.git
+ * [new branch]      recursoHumano -> recursoHumano
+
+paulr@MSI MINGW64 /c/Git/tienda (recursoHumano)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+paulr@MSI MINGW64 /c/Git/tienda (main)
+$ git merge produccion
+Updating 524791b..e4a9d56
+Fast-forward
+ imagenproducto.png | Bin 0 -> 5957 bytes
+ materiaprima.txt   |   0
+ productofinal.txt  |   0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 imagenproducto.png
+ create mode 100644 materiaprima.txt
+ create mode 100644 productofinal.txt
+
+paulr@MSI MINGW64 /c/Git/tienda (main)
+$ git merge produccion
+Already up to date.
+
+paulr@MSI MINGW64 /c/Git/tienda (main)
+$ git push origin main
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/PaulRamirez280/tienda.git
+   524791b..e4a9d56  main -> main
+
+paulr@MSI MINGW64 /c/Git/tienda (main)
+$ git tag -a version1 -m "Esta es la version 1"
+
+paulr@MSI MINGW64 /c/Git/tienda (main)
+$ git push --tags
+Enumerating objects: 1, done.
+Counting objects: 100% (1/1), done.
+Writing objects: 100% (1/1), 178 bytes | 178.00 KiB/s, done.
+Total 1 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/PaulRamirez280/tienda.git
+ * [new tag]         version1 -> version1
+
+paulr@MSI MINGW64 /c/Git/tienda (main)
+$ git checkout recursoHumano
+Switched to branch 'recursoHumano'
+
+paulr@MSI MINGW64 /c/Git/tienda (recursoHumano)
+$ git status
+On branch recursoHumano
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   empleados.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+paulr@MSI MINGW64 /c/Git/tienda (recursoHumano)
+$ git diff
+diff --git a/empleados.txt b/empleados.txt
+index ef72c29..c7c6f10 100644
+--- a/empleados.txt
++++ b/empleados.txt
+@@ -3,4 +3,8 @@ Juan
+ David
+ Paul
+ Luis
+-Fernando
+\ No newline at end of file
++Fernando
++Daniel
++Jesus
++Rafael
++Samuel
+\ No newline at end of file
+
+paulr@MSI MINGW64 /c/Git/tienda (recursoHumano)
+$ git add .
+
+paulr@MSI MINGW64 /c/Git/tienda (recursoHumano)
+$ git commit -m "Se agregaron mas nombres al archivo empleados"
+[recursoHumano 3f1f4bc] Se agregaron mas nombres al archivo empleados
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+
+paulr@MSI MINGW64 /c/Git/tienda (recursoHumano)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+paulr@MSI MINGW64 /c/Git/tienda (main)
+$ git checkout recursoHumano
+Switched to branch 'recursoHumano'
+
+paulr@MSI MINGW64 /c/Git/tienda (recursoHumano)
+$ git push origin recursoHumano
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 352 bytes | 352.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/PaulRamirez280/tienda.git
+   49237df..3f1f4bc  recursoHumano -> recursoHumano
+
+paulr@MSI MINGW64 /c/Git/tienda (recursoHumano)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+paulr@MSI MINGW64 /c/Git/tienda (main)
+$ git merge recursoHumano
+Updating e4a9d56..3f1f4bc
+Fast-forward
+ empleados.txt | 10 ++++++++++
+ tiendas.txt   |  3 +++
+ 2 files changed, 13 insertions(+)
+ create mode 100644 empleados.txt
+ create mode 100644 tiendas.txt
+
+paulr@MSI MINGW64 /c/Git/tienda (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 3 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+paulr@MSI MINGW64 /c/Git/tienda (main)
+$ git push origin main
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/PaulRamirez280/tienda.git
+   e4a9d56..3f1f4bc  main -> main
+
+paulr@MSI MINGW64 /c/Git/tienda (main)
+$ git  tag -a version1.1 -m "Version 1.1 del proyecto"
+
+paulr@MSI MINGW64 /c/Git/tienda (main)
+$ git push --tags
+Enumerating objects: 1, done.
+Counting objects: 100% (1/1), done.
+Writing objects: 100% (1/1), 183 bytes | 183.00 KiB/s, done.
+Total 1 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/PaulRamirez280/tienda.git
+ * [new tag]         version1.1 -> version1.1
+
+paulr@MSI MINGW64 /c/Git/tienda (main)
+$ git push origin main
+Everything up-to-date
+
+paulr@MSI MINGW64 /c/Git/tienda (main)
+$ git checkout ventas
+Switched to branch 'ventas'
+
+paulr@MSI MINGW64 /c/Git/tienda (ventas)
+$ git status
+On branch ventas
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   tiendas.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+paulr@MSI MINGW64 /c/Git/tienda (ventas)
+$ git add .
+
+paulr@MSI MINGW64 /c/Git/tienda (ventas)
+$ git commmit -m "se agregaron 2 tiendas al archivo tiendas"
+git: 'commmit' is not a git command. See 'git --help'.
+
+The most similar command is
+        commit
+
+paulr@MSI MINGW64 /c/Git/tienda (ventas)
+$ git commit -m "se agregaron 2 tiendas al archivo tiendas"
+[ventas 1be9907] se agregaron 2 tiendas al archivo tiendas
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+paulr@MSI MINGW64 /c/Git/tienda (ventas)
+$ git push origin ventas
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 311 bytes | 311.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/PaulRamirez280/tienda.git
+   2d08e72..1be9907  ventas -> ventas
+
+paulr@MSI MINGW64 /c/Git/tienda (ventas)
+$ git checkout recursosHumanos
+error: pathspec 'recursosHumanos' did not match any file(s) known to git
+
+paulr@MSI MINGW64 /c/Git/tienda (ventas)
+$ git checkout recursoHumano
+Switched to branch 'recursoHumano'
+
+paulr@MSI MINGW64 /c/Git/tienda (recursoHumano)
+$ git status
+On branch recursoHumano
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        sueldos.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+paulr@MSI MINGW64 /c/Git/tienda (recursoHumano)
+$ git add .
+
+paulr@MSI MINGW64 /c/Git/tienda (recursoHumano)
+$ git commit -m "Se agrego la informacion de sueldos por puesto"
+[recursoHumano 9e05d9f] Se agrego la informacion de sueldos por puesto
+ 1 file changed, 4 insertions(+)
+ create mode 100644 sueldos.txt
+
+paulr@MSI MINGW64 /c/Git/tienda (recursoHumano)
+$ git push origin recursoHumano
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 364 bytes | 364.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/PaulRamirez280/tienda.git
+   3f1f4bc..9e05d9f  recursoHumano -> recursoHumano
