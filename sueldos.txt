@@ -1,0 +1,4 @@
+Gerente - $50,000
+Supervisor - $30,000
+Jefe de area - $20,000
+Trabajador - $10,000
